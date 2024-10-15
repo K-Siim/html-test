@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <header class="flex justify-between gap-8 mx-8 my-4 items-center">
+      <img
+        class="h-12 w-24"
+        src="https://play-lh.googleusercontent.com/YaasJsy46v32r1uVm5NhpngbzuqvwTtwo6itm503ytqiS5MMACpNKaXSQmtMTJBY8ccq"
+        alt=""
+      />
+      <div class="flex gap-8 font-bold">
+        <a class="text-[18px] text-[#ff5000] hover:text-[#ff5000]" href=""
+          >Osta pilet</a
+        >
+        <a class="text-[18px] text-gray-400 hover:text-[#ff5000]" href=""
+          >Sõiduplaanid</a
+        >
+        <a class="text-[18px] text-gray-400 hover:text-[#ff5000]" href=""
+          >Pileti tagastamine</a
+        >
+        <a class="text-[18px] text-gray-400 hover:text-[#ff5000]" href=""
+          >Uudised</a
+        >
+        <a class="text-[18px] text-gray-400 hover:text-[#ff5000]" href=""
+          >Ärikliendileping</a
+        >
+        <a class="text-[18px] text-gray-400 hover:text-[#ff5000]" href=""
+          >Info</a
+        >
+      </div>
+      <div class="flex my-auto">
+        <div class="flex flex-col text-end border-r-2 border-gray-400 pr-8">
+          <a href="tel:+37212550">12550</a>
+          <a href="mailto:info@pilet.ee">info@pilet.ee</a>
+        </div>
+        <div
+          class="flex gap-8 items-center mx-8 text-gray-400 text-xl font-semibold"
+        >
+          <p class="text-[#ff5000]">ET</p>
+          <p>EN</p>
+          <p>RU</p>
+        </div>
+      </div>
+    </header>
+    <!-- body -->
+    <div
+      class="flex flex-col justify-center items-center h-screen gap-8 bg-[url('https://webcms.tpilet.ee/static/taustapilt.jpg')]"
+    >
+      <h2 class="text-4xl">Osta bussipiletid</h2>
+      <div class="bg-white flex-col p-8 w-35">
+        <div class="flex justify-around text-2xl font-semibold my-4 gap-8">
+          <p class="text-[#ff5000] border-b-2 border-[#ff5000]">ÜKS SUUND</p>
+          <p class="text-[#ff5000] border-b-2 border-[#ff5000]">EDASI-TAGASI</p>
+        </div>
+        <div class="text-left w-full">
+  <input 
+    id="lähtepeatus" 
+    type="text" 
+    class="text-l flex border-b text-gray-400 mb-4 w-full px-2" 
+    placeholder="Lähtepeatus" 
+  />
+  <input 
+    id="sihtpeatus" 
+    type="text" 
+    class="text-l flex border-b text-gray-400 mb-4 w-full px-2" 
+    placeholder="Sihtpeatus" 
+  />
+  <input 
+    class="flex justify-center border-b mb-4" 
+    type="date" 
+    name="" 
+    id="" 
+    value="2024-10-08" 
+  />
+  <!-- Nupp mis muudab Lähtepeatuse ja Sihtpeatuse väärtused -->
+  <button 
+    class="bg-[#ff5000] h-10 w-32 rounded-md text-white mb-4" 
+    onclick="switchDestinations()">
+    Vaheta 
+  </button>
+</div>
+<script>
+  function switchDestinations() {
+  const lähtepeatus = document.getElementById('lähtepeatus');
+  const sihtpeatus = document.getElementById('sihtpeatus');
+  const temp = lähtepeatus.value;
+    lähtepeatus.value = sihtpeatus.value;
+    sihtpeatus.value = temp;
+  }
+</script>
+
+    <div class="flex justify-center">
+        <button class="bg-[#ff5000] h-20 w-60 rounded-md mt-8 text-white">OTSI REISE</button>
+          </div>
+          <p class="text-l flex justify-center mt-24">POPULAARSED SUUNAD</p>
+          <div class="grid grid-cols-2 gap-4">
+            <!-- Vasak pool: Tallinn > Tartu, Pärnu, Narva, Viljandi -->
+            <div>
+              <a href="https://www.tpilet.ee/travel?departureStop=17028&destinationStop=17058" class="text-m block text-left text-sm text-gray-400">Tallinn > Tartu</a>
+              <a href="https://www.tpilet.ee/travel?departureStop=17028&destinationStop=8723" class="text-m block text-left text-sm  text-gray-400">Tallinn > Pärnu</a>
+              <a href="https://www.tpilet.ee/travel?departureStop=17028&destinationStop=16404" class="text-m block text-left text-sm  text-gray-400">Tallinn > Narva</a>
+              <a href="https://www.tpilet.ee/travel?departureStop=17028&destinationStop=12611" class="text-m block text-left text-sm text-gray-400">Tallinn > Viljandi</a>
+            </div>
+          
+            <!-- Parem pool: Tartu > Tallinn, Pärnu > Tallinn, Narva > Tallinn, Viljandi > Tallinn -->
+            <div class="text-right">
+              <a href="https://www.tpilet.ee/travel?departureStop=17058&destinationStop=17028" class="text-m block text-sm  text-gray-400">Tartu > Tallinn</a>
+              <a href="https://www.tpilet.ee/travel?departureStop=8723&destinationStop=17028" class="text-m block text-sm  text-gray-400">Pärnu > Tallinn</a>
+              <a href="https://www.tpilet.ee/travel?departureStop=16404&destinationStop=17028" class="text-m block text-sm  text-gray-400">Narva > Tallinn</a>
+              <a href="https://www.tpilet.ee/travel?departureStop=12611&destinationStop=17028" class="text-m block text-sm  text-gray-400">Viljandi > Tallinn</a>
+            </div>
+          </div>
+      </div>
+    </div>
+    </div>
+  </body>
+</html>
